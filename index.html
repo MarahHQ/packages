@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marah packages</title>
+<style>body{margin:0 auto;max-width:760px;padding:32px 24px;background:#0d1926;color:#eef6fb;font:16px/1.6 system-ui,sans-serif}a{color:#82d8f5}pre{background:#102332;border:1px solid #1d3750;border-radius:10px;padding:14px;overflow-x:auto}</style>
+</head><body>
+<h1>Marah Launcher packages</h1>
+<p>The DNF and APT repositories for <a href="https://github.com/MarahHQ/marah-launcher">Marah Launcher</a>, x86-64. The metadata is signed with <a href="marah.asc">this key</a>.</p>
+<h2>Fedora</h2>
+<pre>sudo curl -fsSLo /etc/yum.repos.d/marah.repo https://marahhq.github.io/packages/rpm/marah.repo
+sudo dnf install marah-launcher</pre>
+<h2>Debian and Ubuntu</h2>
+<pre>sudo curl -fsSLo /usr/share/keyrings/marah.asc https://marahhq.github.io/packages/marah.asc
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/marah.asc] https://marahhq.github.io/packages/deb stable main" |
+  sudo tee /etc/apt/sources.list.d/marah.list
+sudo apt update && sudo apt install marah-launcher</pre>
+<p>Updates come with the system's own updates.</p>
+</body></html>
