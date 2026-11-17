@@ -38,6 +38,8 @@ enabled=1
 gpgcheck=0
 repo_gpgcheck=1
 gpgkey=https://marahhq.github.io/packages/marah.asc
+# Read the repo again after an hour, not dnf's default: a new release shows at the next update.
+metadata_expire=1h
 REPO
 
 # APT: one suite, stable, with the Release file signed both ways.
